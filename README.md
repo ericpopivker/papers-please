@@ -14,59 +14,36 @@ First thing you want to do is declare a PermissionSetTemplate where you will def
 
 
 ```
-    
-    var permissionSetTemplateDto = 
-      new PermissionSetTemplateDto
-      {
-                      
-                      
-      }
-   }
-                      
-    
-    
-    _permissionSetTemplateService(PermissionSetTemplateDto permissionSetTemplateDto);
-    
-     
+            var service = new PermissionSchemaService();
+            service.Create(new PermissionSchema
+            {
+                Id = "UserTemplate",  //has all permissions
+                Modules = new List<Module>
+                {
+                    new Module("Store",
+                        new List<Resource>
+                        {
+                            new Resource("Product",
+                                new List<Operation>
+                                {
+                                    new Operation(CommonOperation.Crud),
+                                    new Operation("AddInventory")
+                                }),
 
+                            new Resource("Category",
+                                new List<Operation>
+                                {
+                                    new Operation(CommonOperation.Crud)
+                                }),
+
+                            new Resource("Reports",
+                                new List<Operation>
+                                {
+                                    new Operation(CommonOperation.Read)
+                                })
+
+                        })
+                }
+            });
+            
 ```
-
-        PermissionSetTemplateService.Create(PermissionSetTemplateDto );
-
-       PermissionSetTemplateDto
-                     Id (optional will generate)
-                     Module
-                                Id
-                                Name
-
-                                Resources
-                                        Id        (must be unique withn Module)
-                                        Name
-
-                                        Operations
-                                                  Id               (must be unique within Resource)
-                                                  Name
-
-
-        PermissionSetService.Create(new PermissionSet());
-                  Id (pass or it will generate one)
-                  List OperationPermissions(ModuleId, ResourceId, OperationId)
-                  List DataPermissions(ModuleId, ResourceId, ResourceEntityId)
-
-
-                  PermissionSetTemplateId
-}
-
-[OperationAuthorize("Store", "Product")]
-ProductController()
-
-MVC COntroller
-[DataAuthorize("Store", "Product")]
-{
-          look for any value like productId and validate it
-}
-
-Query EF
-
-ResourceQuery
-
