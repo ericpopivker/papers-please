@@ -2,7 +2,7 @@
 It is one and only Authorization library for .NET
 
 
-Lets say you are writing an enterprise level application (or any application a bit more complex then "Hello World"), where you would like some granular controls over permissions to user operations as well as data.  You will look for something made my MS first. You will find Identity/Memberhip framework that is pretty simple to get to work out of the box, but requires all kinda hacking for handling complex permission.  Then you will look for NuGet libs dealing wiht Authorization.  There are many projects that deal with Authentication, but somehow Authorization was left behind.  That is till PapersPlease.
+Lets say you are writing an enterprise level application (or any application a bit more complex then "Hello World"), where you would like some granular controls over permissions to user operations as well as data.  You will look for something made my MS first. You will find Identity/Memberhip framework that is pretty simple to get to work out of the box, but requires all kinda hacking for handling complex permission.  Then you will look for NuGet libs dealing with Authorization.  There are many projects that deal with Authentication, but somehow Authorization was left behind.  That is till PapersPlease.
 
 
 
