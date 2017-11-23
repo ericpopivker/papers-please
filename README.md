@@ -17,7 +17,6 @@ First thing you want to do is declare a PermissionSchema where you will define M
             var service = new PermissionSchemaService();
             service.Create(new PermissionSchema
             {
-                Id = "UserTemplate",  //has all permissions
                 Modules = new List<Module>
                 {
                     new Module("Store",
