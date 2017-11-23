@@ -8,9 +8,9 @@ Lets say you are writing an enterprise level application (or any application a b
 
 # Sample usage
 
-## Declaring Permission Set Template
+## Declaring Permission Schema
 
-First thing you want to do is declare a PermissionSetTemplate where you will define Modules, Resources and Operations for your system.
+First thing you want to do is declare a PermissionSchema where you will define Modules, Resources and Operations for your system.
 
 
 ```
